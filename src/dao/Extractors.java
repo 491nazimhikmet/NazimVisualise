@@ -8,6 +8,7 @@ import java.util.List;
 import model.Work;
 import model.WorkLine;
 import model.Book;
+import model.Word;
 
 public class Extractors {
 	
@@ -44,6 +45,25 @@ public class Extractors {
 			work.setTitle(rs.getString("Title"));
 			
 			result.add(work);
+		}
+		
+		return result;
+	}
+	public static List<Word> extractWord(ResultSet rs) throws SQLException{
+		List<Word> result = new ArrayList<Word>();
+		
+		while(rs.next()){
+			Word word = new Word();
+			word.setBold(rs.getBoolean("isBold"));
+			word.setFont(rs.getString("font"));
+			word.setItalic(rs.getBoolean("isItalic"));
+			word.setText(rs.getString("text"));
+			word.setWordFinish(rs.getDouble("wordFinish"));
+			word.setWordID(rs.getInt("wordId"));
+			word.setWordStart(rs.getDouble("wordStart"));
+			word.setWorkLineID(rs.getInt("workLineId"));
+				
+			result.add(word);
 		}
 		
 		return result;

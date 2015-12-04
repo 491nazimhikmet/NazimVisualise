@@ -65,4 +65,53 @@ public class Word {
 	public List<Word> getWords() {
 		return words;
 	}
+
+
+	public void setWordID(int wordID) {
+		this.wordID = wordID;
+	}
+
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+
+	public void setWordStart(double wordStart) {
+		this.wordStart = wordStart;
+	}
+
+
+	public void setWordFinish(double wordFinish) {
+		this.wordFinish = wordFinish;
+	}
+
+
+	public void setWorkLineID(int workLineID) {
+		this.workLineID = workLineID;
+	}
+
+
+	public void setBold(boolean isBold) {
+		this.isBold = isBold;
+	}
+
+
+	public void setItalic(boolean isItalic) {
+		this.isItalic = isItalic;
+	}
+
+
+	public void setFont(String font) {
+		this.font = font;
+	}
+
+
+	public void setWords(List<Word> words) {
+		this.words = words;
+	}
+	@Override
+	public String toString(){
+		return text;
+	}
 }
